@@ -1,3 +1,4 @@
+from matplotlib.colors import DivergingNorm
 import streamlit as st
 # To make things easier later, we're also importing numpy and pandas for
 # working with sample data.
@@ -94,3 +95,29 @@ if option == 'Past Waste Generated':
         go.Bar(name='TotalWaste', x=subset_data['SubType'], y=subset_data['TotalWaste']),
         go.Bar(name='Avg_Daily_Occupants', x=subset_data['SubType'], y=subset_data['Avg_Daily_Occupants'])])
         st.plotly_chart(fig)
+
+#type of visualisation user wants to see
+if option == 'Geographical Analysis':
+    st.title("Geographic Analysis of waste collection centres")
+    st.header("Welcome to our Visualisations regarding geographic analysis! We provide visualisations for users to find the closest waste collection points from the comfort of their homes!")
+
+visualisation_choice = st.selectbox('What is the type of visualisation you would like to see?',('Closest E-recycling bins','Closest 2nd hand good collection point'))
+
+if visualisation_choice == 'Closest E-recycling bins':
+    st.selectbox('Closest E-recycling bins', ('Closest 2nd hand good collection point'))
+    js = "window.open('https://www.https://learngis2.maps.arcgis.com/home/item.html?id=1fcf5b2deeb34e78bc3df27a4c3c2502')"  # New tab or window
+    html = '<img src onerror="{}">'.format(js)
+    div = DivergingNorm(text=html)
+    st.bokeh_chart(div)
+
+
+elif visualisation_choice == 'Closest 2nd hand good collection point':
+    st.selectbox('Closest 2nd hand good collection point', ('Closest E-recycling bins'))
+    js = "window.open('https://learngis2.maps.arcgis.com/home/item.html?id=f3e86e2e5df14a36a12c17ddb463b6c2')"  # New tab or window
+    html = '<img src onerror="{}">'.format(js)
+    div = DivergingNorm(text=html)
+    st.bokeh_chart(div)
+
+
+
+
