@@ -46,13 +46,13 @@ def prediction(numberOfETFs,subtype,capacity,area):
     elif numberOfETFs == "Industrial" and subtype =='Manafacturing':
         numberOfETFs=5
         subtype=12
-    elif numberOfETFs == "Instituitional" and subtype =='Airport':
+    elif numberOfETFs == "Institution" and subtype =='Airport':
         numberOfETFs=4
         subtype=9
-    elif numberOfETFs == "Instituitional" and subtype =='Police Station':
+    elif numberOfETFs == "Institution" and subtype =='Police Station':
         numberOfETFs=4
         subtype=10
-    elif numberOfETFs == "Instituitional" and subtype =='Fire Station':
+    elif numberOfETFs == "Institution" and subtype =='Fire Station':
         numberOfETFs=4
         subtype=11
     elif numberOfETFs == "Educational" and subtype =='Nurseries':
