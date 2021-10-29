@@ -105,7 +105,7 @@ visualisation_choice = st.selectbox('What is the type of visualisation you would
 
 if visualisation_choice == 'Closest E-recycling bins':
     st.selectbox('Closest E-recycling bins', ('Closest 2nd hand good collection point'))
-    js = "window.open('https://www.https://learngis2.maps.arcgis.com/home/item.html?id=1fcf5b2deeb34e78bc3df27a4c3c2502')"  # New tab or window
+    js = "window.open('http://storage.googleapis.com/fyp-e-recycling-bins/index.html')"  # New tab or window
     html = '<img src onerror="{}">'.format(js)
     div = DivergingNorm(text=html)
     st.bokeh_chart(div)
@@ -113,7 +113,7 @@ if visualisation_choice == 'Closest E-recycling bins':
 
 elif visualisation_choice == 'Closest 2nd hand good collection point':
     st.selectbox('Closest 2nd hand good collection point', ('Closest E-recycling bins'))
-    js = "window.open('https://learngis2.maps.arcgis.com/home/item.html?id=f3e86e2e5df14a36a12c17ddb463b6c2')"  # New tab or window
+    js = "window.open('http://storage.googleapis.com/fyp-2nd-hands-goods-collection/index.html')"  # New tab or window
     html = '<img src onerror="{}">'.format(js)
     div = DivergingNorm(text=html)
     st.bokeh_chart(div)
